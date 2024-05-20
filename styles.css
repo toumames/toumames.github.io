@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5e6cc; /* Light brown background */
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+}
+
+.counter {
+    margin-bottom: 100px;
+}
+
+#title {
+    font-family: 'Pacifico', cursive;
+}
+
+.cookie-container {
+    position: relative;
+}
+
+#cookie {
+    width: 200px;
+    height: 200px;
+    animation: rotate 5s linear infinite;
+    cursor: pointer;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.small-cookie {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    animation: emit 1s ease-out forwards;
+}
+
+@keyframes emit {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.5) translate(100px, -100px);
+    }
+}
